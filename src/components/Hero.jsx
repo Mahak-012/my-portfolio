@@ -6,7 +6,6 @@ function Hero() {
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
-  
   const roles = [
     "Frontend Developer",
     "Graphic Designer",
@@ -51,12 +50,11 @@ function Hero() {
         style={{ background: "#059669" }}
       />
 
-      {/* Changed lg:px-20 to lg:px-12 to shift content left */}
       <div className="w-full px-6 sm:px-10 md:px-14 lg:px-12 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-16">
             
-            {/* Left Content - Width increased to 60% for more left shift */}
+            {/* Left Content */}
             <div className="lg:w-[60%]">
               {/* Badge */}
               <div
@@ -73,14 +71,14 @@ function Hero() {
 
               <p className="text-gray-400 text-base mb-1">Hi, I'm</p>
 
-              {/* Mahak - Size increased and Glow added for better visibility */}
+              {/* Mahak */}
               <h1
                 className="text-6xl sm:text-7xl md:text-8xl font-black leading-tight mb-3"
                 style={{
                   background: "linear-gradient(135deg,#10b981,#34d399,#6ee7b7)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  filter: "drop-shadow(0 0 25px rgba(16,185,129,0.4))", // Glow effect
+                  filter: "drop-shadow(0 0 25px rgba(16,185,129,0.4))",
                 }}
               >
                 Mahak
@@ -92,7 +90,7 @@ function Hero() {
                 <span className="w-0.5 h-6 rounded-full animate-pulse bg-emerald-500" />
               </div>
 
-              {/* Description - SEO removed from text */}
+              {/* Description */}
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
                 A <span className="text-emerald-400 font-semibold">multi-talented creative professional</span> from{" "}
                 <span className="text-emerald-400 font-semibold">Lahore 🇵🇰</span> — specializing in{" "}
@@ -101,6 +99,7 @@ function Hero() {
                 My goal? Build <span className="text-emerald-400 font-semibold">impactful digital experiences</span> that stand out.
               </p>
 
+              {/* Buttons */}
               <div className="flex flex-wrap gap-4 mb-10">
                 <a
                   href="#projects"
@@ -123,6 +122,21 @@ function Hero() {
                 >
                   Hire Me →
                 </a>
+                {/* Download Resume Button */}
+                <a
+                  href="/Mahak_Resume.pdf" 
+                  download 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 border"
+                  style={{
+                    color: "#10b981",
+                    borderColor: "rgba(16,185,129,0.4)",
+                    background: "rgba(16,185,129,0.05)",
+                  }}
+                >
+                  Download Resume 📄
+                </a>
               </div>
 
               {/* Stats */}
@@ -142,7 +156,7 @@ function Hero() {
               </div>
             </div>
 
-            {/* Right Side - Circle Design (Not touched at all) */}
+            {/* Right Side - Circle Design */}
             <div className="lg:w-[40%] flex justify-center lg:justify-end">
               <div className="relative w-72 h-72">
                 <div
