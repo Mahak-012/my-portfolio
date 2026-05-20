@@ -1,16 +1,248 @@
-# React + Vite
+🌟 Mahak | Frontend Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+Live Demo GitHub Repo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A clean, ultra-fast, and responsive portfolio website built with React and Tailwind CSS to showcase my frontend projects, skills, and journey.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+
+🌐 Live Demo
+🚀 Check out the live portfolio here: https://my-portfolio-seven-pi-49.vercel.app/
+
+
+
+
+
+
+
+📖 About The Project
+This is my personal portfolio website designed with a sleek dark theme and emerald green accents. It highlights my transition into web development over 4 months, featuring my projects, skills, and a fully functional contact form. The goal was to build a lightning-fast UI that stands out.
+
+
+
+
+
+
+
+
+
+
+
+✨ Key Features
+📱 Fully Responsive: Looks perfect on desktop, tablet, and mobile.
+
+
+
+
+
+
+
+
+⚡ Ultra-Fast UI: Smooth animations and clean design.
+
+
+
+
+
+
+
+
+
+
+
+📂 Projects Section: Detailed showcase of 5+ live projects with GitHub and Live Demo links.
+
+
+
+
+
+
+
+
+
+
+🛠️ Skills Section: Interactive progress bars and tech stack tags.
+
+
+
+
+
+
+
+
+
+
+📬 Working Contact Form: Integrated with Formspree to receive messages directly via email.
+
+
+
+
+
+
+
+
+
+
+🌗 Dark Theme: Professional emerald green and dark background aesthetic.
+
+
+
+
+
+
+
+
+
+
+
+🛠️ Tech Stack
+ReactTailwind CSSViteFormspree
+
+
+
+
+
+
+
+
+🚀 Run Locally
+To run this project on your local machine, follow these steps:
+
+Clone the project
+
+
+
+
+
+
+
+
+
+
+
+git clone https://github.com/Mahak-012/my-portfolio.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Go to the project directory
+
+
+
+
+
+
+
+
+
+
+bash
+
+
+
+
+
+
+
+
+
+
+cd my-portfolio
+
+
+
+
+
+
+
+
+
+Install dependencies
+
+
+
+
+
+
+
+
+
+
+
+bash
+
+npm install
+
+
+
+
+
+
+
+
+
+
+
+
+Start the development server
+bash
+
+npm run dev
+📬 Let's Connect!
+
+
+
+
+
+
+
+LinkedIn:https://www.linkedin.com/in/mahak-webdev/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GitHub: Mahak-012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Email: mahakmimi01@gmail.com
+
