@@ -122,12 +122,11 @@ function Hero() {
                 >
                   Hire Me →
                 </a>
-                {/* Download Resume Button */}
+                
+                {/* ✅ UPDATED Download Resume Button */}
                 <a
                   href="/Mahak_Resume.pdf" 
-                  download 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  download="Mahak_Resume.pdf"
                   className="px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 border"
                   style={{
                     color: "#10b981",
