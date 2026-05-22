@@ -50,7 +50,8 @@ function Hero() {
         style={{ background: "#059669" }}
       />
 
-      <div className="w-full px-6 sm:px-10 md:px-14 lg:px-12 py-16 md:py-24">
+      {/* ✅ UPDATED: Top padding increased (pt-28 / md:pt-36) to push content below navbar */}
+      <div className="w-full px-6 sm:px-10 md:px-14 lg:px-12 pt-28 pb-16 md:pt-36 md:pb-24">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-16">
             
@@ -123,7 +124,7 @@ function Hero() {
                   Hire Me →
                 </a>
                 
-                {/* ✅ UPDATED Download Resume Button */}
+                {/* Download Resume Button */}
                 <a
                   href="/Mahak_Resume.pdf" 
                   download="Mahak_Resume.pdf"
