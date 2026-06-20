@@ -41,13 +41,15 @@ function Hero() {
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style={{ background: "#10b981" }} />
       <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none" style={{ background: "#059669" }} />
 
-      <div className="w-full pt-28 pb-16 md:pt-36 md:pb-24">
-        <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-0">
+      <div className="w-full pt-24 pb-16 md:pt-32 md:pb-24">
+        {/* ✅ Text UPAR, Image NICHE — Mobile pe pehle text */}
+        <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-0">
 
-          {/* Left Content */}
-          <div className="lg:w-[55%] px-6 sm:px-10 md:px-14 lg:pl-16 lg:pr-8">
+          {/* Left Content — Text (UPAR) */}
+          <div className="lg:w-[55%] px-6 sm:px-10 lg:pl-16 lg:pr-8 order-1 lg:order-1">
+
             <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 border"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-5 border"
               style={{ background: "rgba(16,185,129,0.08)", borderColor: "rgba(16,185,129,0.25)", color: "#6ee7b7" }}
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -55,7 +57,7 @@ function Hero() {
             </div>
 
             <p
-              className="text-gray-400 text-lg mb-0"
+              className="text-gray-400 text-base mb-0"
               style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic" }}
             >
               Hi, I'm
@@ -66,7 +68,7 @@ function Hero() {
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",
-                fontSize: "clamp(4.5rem, 9vw, 8rem)",
+                fontSize: "clamp(3.5rem, 9vw, 8rem)",
                 background: "linear-gradient(135deg,#10b981,#34d399,#6ee7b7)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -78,7 +80,7 @@ function Hero() {
 
             <div className="flex items-center flex-wrap gap-2 mb-5">
               <span
-                className="text-xl sm:text-2xl font-semibold"
+                className="text-lg sm:text-2xl font-semibold"
                 style={{
                   fontFamily: "'Playfair Display', serif",
                   fontStyle: "italic",
@@ -91,24 +93,25 @@ function Hero() {
             </div>
 
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
-                  Not just a developer —{" "}
-                  <span className="text-emerald-400 font-semibold">a creative who codes</span>.
-                   I turn ideas into{" "}
-                    <span className="text-emerald-400 font-semibold">experiences that inspire</span>.
-                  Based in <span className="text-emerald-400 font-semibold">Lahore 🇵🇰</span> ✨
-                </p>
-            {/* Buttons — FIXED */}
-            <div className="flex flex-wrap gap-4 mb-10">
+              Not just a developer —{" "}
+              <span className="text-emerald-400 font-semibold">a creative who codes</span>.
+              I turn ideas into{" "}
+              <span className="text-emerald-400 font-semibold">experiences that inspire</span>.
+              Based in <span className="text-emerald-400 font-semibold">Lahore 🇵🇰</span> ✨
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-3 mb-10">
               <a
                 href="#projects"
-                className="px-6 py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-300 hover:scale-105"
+                className="px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-300 hover:scale-105"
                 style={{ background: "linear-gradient(135deg,#10b981,#059669)", boxShadow: "0 0 20px rgba(16,185,129,0.3)" }}
               >
                 View My Work →
               </a>
               <a
                 href="#contact"
-                className="px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 border"
+                className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 border"
                 style={{ color: "#10b981", borderColor: "rgba(16,185,129,0.4)", background: "rgba(16,185,129,0.05)" }}
               >
                 Hire Me →
@@ -116,7 +119,7 @@ function Hero() {
               <a
                 href="/Mahak_Resume.pdf"
                 download="Mahak_Resume.pdf"
-                className="px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 border"
+                className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 border"
                 style={{ color: "#10b981", borderColor: "rgba(16,185,129,0.4)", background: "rgba(16,185,129,0.05)" }}
               >
                 Download Resume 📄
@@ -139,32 +142,33 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right Side — Circle */}
-          <div className="lg:w-[45%] flex justify-center lg:justify-center">
-            <div className="relative w-[420px] h-[420px]">
-
+          {/* Right Side — Image (NECHE) */}
+          <div className="lg:w-[45%] flex justify-center order-2 lg:order-2">
+            <div
+              className="relative"
+              style={{ width: "min(380px, 75vw)", height: "min(380px, 75vw)" }}
+            >
+              {/* Glows & Rings */}
               <div
                 className="absolute rounded-full pointer-events-none"
                 style={{
-                  inset: "-40px",
+                  inset: "-30px",
                   background: "radial-gradient(circle, rgba(16,185,129,0.25) 0%, transparent 70%)",
                   filter: "blur(20px)",
                 }}
               />
-
               <div
                 className="absolute rounded-full pointer-events-none"
                 style={{
-                  inset: "-18px",
+                  inset: "-14px",
                   border: "1.5px dashed rgba(16,185,129,0.35)",
                   animation: "spin 25s linear infinite",
                 }}
               />
-
               <div
                 className="absolute rounded-full pointer-events-none"
                 style={{
-                  inset: "-10px",
+                  inset: "-8px",
                   border: "2px solid transparent",
                   borderTopColor: "rgba(16,185,129,0.8)",
                   borderRightColor: "rgba(16,185,129,0.3)",
@@ -173,16 +177,16 @@ function Hero() {
                   animation: "spinReverse 4s linear infinite",
                 }}
               />
-
               <div
                 className="absolute rounded-full pointer-events-none"
                 style={{
-                  inset: "-4px",
+                  inset: "-3px",
                   border: "2px solid rgba(16,185,129,0.5)",
                   boxShadow: "0 0 25px rgba(16,185,129,0.4), inset 0 0 25px rgba(16,185,129,0.05)",
                 }}
               />
 
+              {/* Profile Image */}
               <div
                 className="relative w-full h-full rounded-full overflow-hidden"
                 style={{
@@ -193,6 +197,7 @@ function Hero() {
                 <img src={profileImg} alt="Mahak" className="w-full h-full object-cover object-top" />
               </div>
 
+              {/* Orbiting Badges */}
               {[
                 { label: "React", angle: 0 },
                 { label: "Design", angle: 72 },
@@ -207,11 +212,14 @@ function Hero() {
                 return (
                   <div
                     key={label}
-                    className="absolute w-14 h-14 rounded-full flex items-center justify-center text-xs font-bold border"
+                    className="absolute rounded-full flex items-center justify-center text-xs font-bold border"
                     style={{
                       top: `${top}%`,
                       left: `${left}%`,
                       transform: "translate(-50%,-50%)",
+                      width: "clamp(36px, 8vw, 56px)",
+                      height: "clamp(36px, 8vw, 56px)",
+                      fontSize: "clamp(9px, 2vw, 12px)",
                       background: "rgba(16,185,129,0.12)",
                       borderColor: "rgba(16,185,129,0.6)",
                       color: "#10b981",
@@ -229,7 +237,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* CSS for spin animations */}
       <style>{`
         @keyframes spin {
           from { transform: rotate(0deg); }
