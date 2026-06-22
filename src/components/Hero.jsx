@@ -42,7 +42,6 @@ function Hero() {
       <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none" style={{ background: "#059669" }} />
 
       <div className="w-full pt-24 pb-16 md:pt-32 md:pb-24">
-        {/* ✅ Text UPAR, Image NICHE — Mobile pe pehle text */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-0">
 
           {/* Left Content — Text (UPAR) */}
@@ -78,13 +77,14 @@ function Hero() {
               Mahak
             </h1>
 
+            {/* ✅ TYPEWRITER TEXT — COLOR WHITE */}
             <div className="flex items-center flex-wrap gap-2 mb-5">
               <span
                 className="text-lg sm:text-2xl font-semibold"
                 style={{
                   fontFamily: "'Playfair Display', serif",
                   fontStyle: "italic",
-                  color: "#a7f3d0",
+                  color: "white",  // ← WHITE ho gaya
                 }}
               >
                 {text}
