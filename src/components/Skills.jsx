@@ -53,95 +53,111 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 md:py-28 px-6 sm:px-10 md:px-14 lg:px-20 relative overflow-hidden"
-      style={{ background: "#020806" }}
+      className="py-24 md:py-32 px-4 sm:px-12 md:px-16 lg:px-24 relative overflow-hidden bg-[#010403] text-white selection:bg-emerald-500/30"
     >
-      {/* Background decoration */}
-      <div
-        className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-5 blur-3xl pointer-events-none"
-        style={{ background: "#10b981" }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-96 h-96 rounded-full opacity-5 blur-3xl pointer-events-none"
-        style={{ background: "#34d399" }}
-      />
+      {/* ─── CUSTOM PREMIUM GLOW STYLING ─── */}
+      <style>{`
+        .cyber-skill-card {
+          background: rgba(4, 12, 9, 0.5);
+          border: 1px solid rgba(16, 185, 129, 0.15);
+          backdrop-filter: blur(20px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(16, 185, 129, 0.03);
+          transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .cyber-skill-card:hover {
+          border-color: rgba(52, 211, 153, 0.6);
+          transform: translateY(-5px);
+          box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+        }
+        .glow-progress-bar {
+          box-shadow: 0 0 12px var(--bar-color);
+        }
+        @keyframes subtlePulse {
+          0%, 100% { transform: scale(1); opacity: 0.1; }
+          50% { transform: scale(1.1); opacity: 0.18; }
+        }
+        .animate-subtle-glow {
+          animation: subtlePulse 10s ease-in-out infinite;
+        }
+      `}</style>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      {/* ─── AMBIENT NEBULA BACKGROUNDS ─── */}
+      <div className="absolute top-[-10%] right-[-5%] w-[300px] sm:w-[700px] h-[300px] sm:h-[700px] rounded-full bg-radial from-[#10b981]/12 via-transparent to-transparent blur-[120px] sm:blur-[160px] pointer-events-none mix-blend-screen z-0 animate-subtle-glow" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] rounded-full bg-radial from-[#34d399]/8 via-transparent to-transparent blur-[100px] sm:blur-[140px] pointer-events-none z-0 animate-subtle-glow" style={{ animationDelay: '-3s' }} />
+
+      <div className="w-full max-w-7xl mx-auto relative z-10">
         
-        {/* Section Heading */}
-        <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-            <span className="text-emerald-400 text-xs font-medium tracking-wide">⚡ 4 MONTHS MASTERY</span>
+        {/* SECTION HEADER */}
+        <div className="text-center mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/20 border border-emerald-900/40 mb-5 backdrop-blur-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-emerald-300 text-[11px] font-bold tracking-widest uppercase">⚡ 4 Months Mastery</span>
           </div>
+          
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-black"
+            className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight"
             style={{
-              background: "linear-gradient(135deg,#10b981,#34d399,#6ee7b7)",
+              background: "linear-gradient(135deg, #ffffff 40%, #a7f3d0 75%, #10b981 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              filter: "drop-shadow(0px 15px 35px rgba(16,185,129,0.15))",
             }}
           >
             My Tech Arsenal
           </h2>
-          <div className="w-20 h-0.5 bg-gradient-to-r from-emerald-500 to-emerald-300 mx-auto mt-4 rounded-full"></div>
-          <p className="text-gray-400 mt-4 text-sm max-w-2xl mx-auto">
-            4 months. 14+ tools. 15+ projects. From zero to confident developer. {/* Changed 10+ to 14+ */}
+          <p className="text-zinc-400 mt-5 text-sm sm:text-base max-w-2xl mx-auto font-light leading-relaxed tracking-wide">
+            4 months. <span className="text-emerald-400 font-medium">14+ tools</span>. <span className="text-emerald-400 font-medium">15+ projects</span>. From zero to architectural, confident interface development.
           </p>
         </div>
 
-        {/* Skills Grid */}
+        {/* SKILLS MATRIX GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           
-          {/* Frontend Development Card */}
-          <div
-            className="rounded-2xl p-6 md:p-8 border group transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
-            style={{
-              background: "rgba(16,185,129,0.03)",
-              borderColor: "rgba(16,185,129,0.15)",
-            }}
-          >
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-gray-800">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+          {/* Frontend Development Block */}
+          <div className="cyber-skill-card rounded-2xl p-6 md:p-8 group">
+            <div className="flex items-center gap-4 mb-8 pb-4 border-b border-zinc-900">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
                 💻
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Frontend Development</h3>
-                <p className="text-gray-500 text-xs">4 months of focused learning</p>
+                <h3 className="text-xl font-bold tracking-wide text-zinc-100">Frontend Development</h3>
+                <p className="text-zinc-500 text-xs mt-0.5 font-light">4 months of dense structural coding</p>
               </div>
             </div>
 
-            <div className="space-y-5">
+            <div className="space-y-6">
               {frontendSkills.map((skill) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg">{skill.icon}</span>
-                      <span className="text-gray-300 font-medium text-sm">
+                <div key={skill.name} className="relative">
+                  <div className="flex justify-between items-center mb-2.5">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-lg filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">{skill.icon}</span>
+                      <span className="text-zinc-300 font-medium text-sm tracking-wide">
                         {skill.name}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-emerald-400 text-sm font-bold">
+                      <span className="text-emerald-400 text-sm font-bold font-mono">
                         {skill.level}%
                       </span>
                       <span
-                        className="text-xs px-1.5 py-0.5 rounded"
-                        style={{ background: `${skill.color}20`, color: skill.color }}
+                        className="text-[9px] uppercase tracking-widest font-black px-2 py-0.5 rounded border"
+                        style={{ 
+                          background: `${skill.color}10`, 
+                          borderColor: `${skill.color}30`, 
+                          color: skill.color 
+                        }}
                       >
                         {skill.level >= 80 ? "Advanced" : "Intermediate"}
                       </span>
                     </div>
                   </div>
-                  <div
-                    className="w-full h-2 rounded-full overflow-hidden"
-                    style={{ background: "rgba(16,185,129,0.1)" }}
-                  >
+                  <div className="w-full h-[6px] bg-zinc-950 rounded-full overflow-hidden border border-zinc-900/40">
                     <div
-                      className="h-full rounded-full transition-all duration-1000 ease-out"
+                      className="h-full rounded-full transition-all duration-1000 ease-out glow-progress-bar"
                       style={{
                         width: `${skill.level}%`,
                         background: `linear-gradient(90deg, ${skill.color}, #10b981)`,
+                        "--bar-color": `${skill.color}50`
                       }}
                     />
                   </div>
@@ -150,47 +166,39 @@ function Skills() {
             </div>
           </div>
 
-          {/* Other Skills Card */}
-          <div
-            className="rounded-2xl p-6 md:p-8 border group transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
-            style={{
-              background: "rgba(16,185,129,0.03)",
-              borderColor: "rgba(16,185,129,0.15)",
-            }}
-          >
-            <div className="flex items-center gap-3 mb-6 pb-3 border-b border-gray-800">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+          {/* Other Capabilities Block */}
+          <div className="cyber-skill-card rounded-2xl p-6 md:p-8 group">
+            <div className="flex items-center gap-4 mb-8 pb-4 border-b border-zinc-900">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
                 🚀
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Other Skills</h3>
-                <p className="text-gray-500 text-xs">Beyond just coding</p>
+                <h3 className="text-xl font-bold tracking-wide text-zinc-100">Complementary Arsenal</h3>
+                <p className="text-zinc-500 text-xs mt-0.5 font-light">Beyond pixel implementation</p>
               </div>
             </div>
 
-            <div className="space-y-5">
+            <div className="space-y-6">
               {otherSkills.map((skill) => (
                 <div key={skill.name}>
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg">{skill.icon}</span>
-                      <span className="text-gray-300 font-medium text-sm">
+                  <div className="flex justify-between items-center mb-2.5">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-lg filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">{skill.icon}</span>
+                      <span className="text-zinc-300 font-medium text-sm tracking-wide">
                         {skill.name}
                       </span>
                     </div>
-                    <span className="text-emerald-400 text-sm font-bold">
+                    <span className="text-emerald-400 text-sm font-bold font-mono">
                       {skill.level}%
                     </span>
                   </div>
-                  <div
-                    className="w-full h-2 rounded-full overflow-hidden"
-                    style={{ background: "rgba(16,185,129,0.1)" }}
-                  >
+                  <div className="w-full h-[6px] bg-zinc-950 rounded-full overflow-hidden border border-zinc-900/40">
                     <div
-                      className="h-full rounded-full transition-all duration-1000 ease-out"
+                      className="h-full rounded-full transition-all duration-1000 ease-out glow-progress-bar"
                       style={{
                         width: `${skill.level}%`,
-                        background: `linear-gradient(90deg, ${skill.color}, #10b981)`,
+                        background: `linear-gradient(90deg, ${skill.color}, #34d399)`,
+                        "--bar-color": `${skill.color}50`
                       }}
                     />
                   </div>
@@ -200,27 +208,18 @@ function Skills() {
           </div>
         </div>
 
-        {/* Skill Tags Cloud */}
-        <div
-          className="mt-10 rounded-2xl p-6 md:p-8 text-center border"
-          style={{
-            background: "rgba(16,185,129,0.02)",
-            borderColor: "rgba(16,185,129,0.1)",
-          }}
-        >
-          <p className="text-gray-400 text-sm mb-4">
-            📦 <span className="text-emerald-400">14+ Tools & Technologies</span> — Mastered in 4 Months
+        {/* TECH CLOUD COMPONENT */}
+        <div className="mt-12 cyber-skill-card rounded-2xl p-6 md:p-8 text-center">
+          <p className="text-zinc-400 text-xs sm:text-sm font-light tracking-wide mb-5">
+            📦 <span className="text-emerald-400 font-medium">14+ Integrated Stack Tools</span> — Configured & Verified
           </p>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3.5">
             {skillTags.map((tech, idx) => (
               <span
                 key={tech}
-                className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-110 cursor-default animate-fadeIn"
+                className="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium tracking-wide text-emerald-300 transition-all duration-300 border border-emerald-950 bg-emerald-950/10 hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:scale-[1.05] cursor-default"
                 style={{
-                  background: "rgba(16,185,129,0.08)",
-                  border: "1px solid rgba(16,185,129,0.2)",
-                  color: "#6ee7b7",
-                  animationDelay: `${idx * 50}ms`,
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.4)"
                 }}
               >
                 {tech}
@@ -229,42 +228,48 @@ function Skills() {
           </div>
         </div>
 
-        {/* Consistency Banner - UPDATED */}
+        {/* METRICS STREAK BANNER */}
         <div
-          className="mt-8 rounded-2xl p-5 border text-center relative overflow-hidden"
+          className="mt-8 rounded-2xl p-6 border relative overflow-hidden"
           style={{
-            background: "linear-gradient(135deg, rgba(16,185,129,0.06), rgba(16,185,129,0.01))",
+            background: "linear-gradient(135deg, rgba(16,185,129,0.04), rgba(4,12,9,0.2))",
             borderColor: "rgba(16,185,129,0.15)",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-transparent"></div>
-          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">📅</span>
-              <div>
-                <p className="text-emerald-400 font-bold text-sm">120+ Days</p>
-                <p className="text-gray-500 text-[10px]">Consistent Coding</p>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-transparent pointer-events-none" />
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 items-center text-center">
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <span className="text-2xl filter drop-shadow-[0_2px_8px_rgba(16,185,129,0.3)]">📅</span>
+              <div className="sm:text-left">
+                <p className="text-emerald-400 font-bold font-mono text-sm sm:text-base">120+ Days</p>
+                <p className="text-zinc-500 text-[10px] uppercase tracking-wider font-semibold mt-0.5">Continuous Git Commit Stream</p>
               </div>
             </div>
-            <div className="w-px h-8 bg-gray-800 hidden sm:block"></div>
-            {/* Changed from 1000+ Hours to 100% Dedication */}
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">⚡</span>
-              <div>
-                <p className="text-emerald-400 font-bold text-sm">100% Dedication</p>
-                <p className="text-gray-500 text-[10px]">Focus & Consistency</p>
+
+            <div className="hidden sm:block w-px h-8 bg-zinc-900 mx-auto" />
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <span className="text-2xl filter drop-shadow-[0_2px_8px_rgba(16,185,129,0.3)]">⚡</span>
+              <div className="sm:text-left">
+                <p className="text-emerald-400 font-bold font-mono text-sm sm:text-base">100% Dedication</p>
+                <p className="text-zinc-500 text-[10px] uppercase tracking-wider font-semibold mt-0.5">Focus & Absolute Build Consistency</p>
               </div>
             </div>
-            <div className="w-px h-8 bg-gray-800 hidden sm:block"></div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🎯</span>
-              <div>
-                <p className="text-emerald-400 font-bold text-sm">15+ Projects</p>
-                <p className="text-gray-500 text-[10px]">Real-World Experience</p>
+
+            <div className="hidden sm:block w-px h-8 bg-zinc-900 mx-auto" />
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <span className="text-2xl filter drop-shadow-[0_2px_8px_rgba(16,185,129,0.3)]">🎯</span>
+              <div className="sm:text-left">
+                <p className="text-emerald-400 font-bold font-mono text-sm sm:text-base">15+ Production Builds</p>
+                <p className="text-zinc-500 text-[10px] uppercase tracking-wider font-semibold mt-0.5">Live Production Contexts</p>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );
