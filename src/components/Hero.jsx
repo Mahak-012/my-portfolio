@@ -356,7 +356,7 @@ function Hero() {
               Let's Connect
             </a>
 
-            <a href="/resume.pdf" download className="px-6 py-3 rounded-xl border border-zinc-800 bg-zinc-950/30 text-zinc-300 text-sm font-medium tracking-wide hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300 flex items-center gap-2">
+            <a href="/Mahak_Resume.pdf" download className="px-6 py-3 rounded-xl border border-zinc-800 bg-zinc-950/30 text-zinc-300 text-sm font-medium tracking-wide hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300 flex items-center gap-2">
               Download CV ↓
             </a>
           </div>
