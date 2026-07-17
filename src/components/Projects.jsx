@@ -46,6 +46,16 @@ function Projects() {
     },
     {
       id: 5,
+      title: "Job Portal UI",
+      category: "react",
+      tech: ["React", "Tailwind CSS", "Framer Motion", "React Router"],
+      description: "A modern, fully responsive job portal platform with AI-powered job matching, live job listings, and category browsing.",
+      image: "💼",
+      liveLink: "https://job-portal-ui-six.vercel.app/",
+      githubLink: "https://github.com/Mahak-012/job-portal-ui",
+    },
+    {
+      id: 6,
       title: "To Do App (Mobile)",
       category: "react",
       tech: ["React Native", "Expo", "AsyncStorage"],
@@ -218,7 +228,7 @@ function Projects() {
         {/* View More Button */}
         <div className="text-center mt-6 md:mt-8">
           <a
-            href="https://github.com/Mahak-012?tab=repositories" // Updated link
+            href="https://github.com/Mahak-012?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 border"
