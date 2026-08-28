@@ -46,13 +46,13 @@ function Projects() {
     },
     {
       id: 5,
-      title: "Job Portal UI",
-      category: "react",
-      tech: ["React", "Tailwind CSS", "Framer Motion", "React Router"],
-      description: "A modern, fully responsive job portal platform with AI-powered job matching, live job listings, and category browsing.",
-      image: "💼",
-      liveLink: "https://job-portal-ui-six.vercel.app/",
-      githubLink: "https://github.com/Mahak-012/job-portal-ui",
+      title: "Dental Clinic Website",
+      category: "html-css",
+      tech: ["HTML5", "Tailwind CSS", "Responsive Design"],
+      description: "A professional, modern and fully responsive dental clinic website with service details and appointment booking.",
+      image: "🦷",
+      liveLink: "https://dental-clinic-seven-iota.vercel.app/",
+      githubLink: "https://github.com/Mahak-012", 
     },
     {
       id: 6,
@@ -247,4 +247,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Projects;npm
