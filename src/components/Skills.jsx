@@ -47,7 +47,7 @@ function Skills() {
   const skillTags = [
     "React", "Tailwind", "JavaScript", "HTML5", "CSS3", 
     "Bootstrap", "Git", "SEO", "Figma", "Responsive Design",
-    "REST APIs", "VS Code", "npm", "Vite"
+    "REST APIs", "VS Code", "Vite"
   ];
 
   return (
