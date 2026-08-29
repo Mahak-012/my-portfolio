@@ -52,7 +52,7 @@ function Projects() {
       description: "A professional, modern and fully responsive dental clinic website with service details and appointment booking.",
       image: "🦷",
       liveLink: "https://dental-clinic-seven-iota.vercel.app/",
-      githubLink: "https://github.com/Mahak-012", 
+      githubLink: "https://github.com/Mahak-012/dental-clinic", 
     },
     {
       id: 6,
