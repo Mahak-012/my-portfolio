@@ -26,6 +26,16 @@ function Projects() {
     },
     {
       id: 3,
+      title: "Job Portal UI",
+      category: "react",
+      tech: ["React", "React Router", "Tailwind CSS"],
+      description: "A professional job portal application featuring job listings, detailed views, company profiles, and user dashboard.",
+      image: "💼",
+      liveLink: "https://job-portal-ui-six.vercel.app/",
+      githubLink: "https://github.com/Mahak-012/job-portal-ui",
+    },
+    {
+      id: 4,
       title: "Institute Website",
       category: "html-css",
       tech: ["HTML5", "CSS3", "JavaScript"],
@@ -35,7 +45,7 @@ function Projects() {
       githubLink: "https://github.com/Mahak-012/Techstem-Technologies",
     },
     {
-      id: 4,
+      id: 5,
       title: "Online Course Landing Page",
       category: "html-css",
       tech: ["HTML5", "Tailwind CSS", "Responsive Design"],
@@ -45,7 +55,7 @@ function Projects() {
       githubLink: "https://github.com/Mahak-012/online-course-landing-page",
     },
     {
-      id: 5,
+      id: 6,
       title: "Dental Clinic Website",
       category: "html-css",
       tech: ["HTML5", "Tailwind CSS", "Responsive Design"],
@@ -55,7 +65,7 @@ function Projects() {
       githubLink: "https://github.com/Mahak-012/dental-clinic", 
     },
     {
-      id: 6,
+      id: 7,
       title: "To Do App (Mobile)",
       category: "react",
       tech: ["React Native", "Expo", "AsyncStorage"],
@@ -218,15 +228,8 @@ function Projects() {
           ))}
         </div>
 
-        {/* Newly Started Work Note */}
-        <div className="text-center mt-10">
-          <p className="text-gray-500 text-sm italic">
-            ✨ Newly started work — more projects will be added with the passage of time!
-          </p>
-        </div>
-
         {/* View More Button */}
-        <div className="text-center mt-6 md:mt-8">
+        <div className="text-center mt-10 md:mt-12">
           <a
             href="https://github.com/Mahak-012?tab=repositories"
             target="_blank"
