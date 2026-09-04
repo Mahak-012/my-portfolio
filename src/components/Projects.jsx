@@ -10,8 +10,8 @@ function Projects() {
       category: "react",
       tech: ["React", "Tailwind CSS", "Context API"],
       description: "A fully responsive e-commerce platform with product filtering, cart functionality, and checkout process.",
-      image: "/mahak-ecom.png", // Yahan aapki lagayi hui image set kar di hai!
-      isImage: true,
+      image: "🛒",
+      isImage: false,
       liveLink: "https://e-commerce-app-eta-dun.vercel.app/",
       githubLink: "https://github.com/Mahak-012/e-commerce-app",
     },
