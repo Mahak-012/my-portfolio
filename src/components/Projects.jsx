@@ -10,7 +10,8 @@ function Projects() {
       category: "react",
       tech: ["React", "Tailwind CSS", "Context API"],
       description: "A fully responsive e-commerce platform with product filtering, cart functionality, and checkout process.",
-      image: "🛒",
+      image: "/mahak-ecom.png", // Yahan aapki lagayi hui image set kar di hai!
+      isImage: true,
       liveLink: "https://e-commerce-app-eta-dun.vercel.app/",
       githubLink: "https://github.com/Mahak-012/e-commerce-app",
     },
@@ -21,6 +22,7 @@ function Projects() {
       tech: ["React", "REST API", "Tailwind CSS"],
       description: "A dynamic app to search for movies, view details, and ratings using a real-time movie database API.",
       image: "🎬",
+      isImage: false,
       liveLink: "https://movie-search-app-pi-neon.vercel.app/",
       githubLink: "https://github.com/Mahak-012/movie-search-app",
     },
@@ -31,6 +33,7 @@ function Projects() {
       tech: ["React", "React Router", "Tailwind CSS"],
       description: "A professional job portal application featuring job listings, detailed views, company profiles, and user dashboard.",
       image: "💼",
+      isImage: false,
       liveLink: "https://job-portal-ui-six.vercel.app/",
       githubLink: "https://github.com/Mahak-012/job-portal-ui",
     },
@@ -41,6 +44,7 @@ function Projects() {
       tech: ["HTML5", "CSS3", "JavaScript"],
       description: "A professional and responsive website for an educational institute with courses and contact details.",
       image: "🏫",
+      isImage: false,
       liveLink: "https://techstem-technologies.vercel.app/",
       githubLink: "https://github.com/Mahak-012/Techstem-Technologies",
     },
@@ -51,6 +55,7 @@ function Projects() {
       tech: ["HTML5", "Tailwind CSS", "Responsive Design"],
       description: "A modern, high-converting landing page for an online course with smooth scroll and appealing UI.",
       image: "📚",
+      isImage: false,
       liveLink: "https://online-course-landing-page-eight.vercel.app/",
       githubLink: "https://github.com/Mahak-012/online-course-landing-page",
     },
@@ -61,6 +66,7 @@ function Projects() {
       tech: ["HTML5", "Tailwind CSS", "Responsive Design"],
       description: "A professional, modern and fully responsive dental clinic website with service details and appointment booking.",
       image: "🦷",
+      isImage: false,
       liveLink: "https://dental-clinic-seven-iota.vercel.app/",
       githubLink: "https://github.com/Mahak-012/dental-clinic", 
     },
@@ -71,6 +77,7 @@ function Projects() {
       tech: ["React Native", "Expo", "AsyncStorage"],
       description: "A cross-platform mobile task manager with categories, stats, and theme toggle. Available on GitHub for mobile testing.",
       image: "📱",
+      isImage: false,
       liveLink: "#",
       githubLink: "https://github.com/Mahak-012/My-TO-DO-App",
     },
@@ -148,15 +155,25 @@ function Projects() {
                 boxShadow: "0 0 30px rgba(16,185,129,0.05)",
               }}
             >
-              {/* Project Image / Icon */}
+              {/* Project Image / Icon Section */}
               <div
-                className="h-40 flex items-center justify-center text-7xl transition-all duration-300 group-hover:scale-110"
+                className="h-44 overflow-hidden flex items-center justify-center transition-all duration-300"
                 style={{
                   background: "rgba(16,185,129,0.05)",
                   borderBottom: "1px solid rgba(16,185,129,0.1)",
                 }}
               >
-                {project.image}
+                {project.isImage ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <span className="text-7xl transition-transform duration-300 group-hover:scale-110">
+                    {project.image}
+                  </span>
+                )}
               </div>
 
               {/* Project Content */}
