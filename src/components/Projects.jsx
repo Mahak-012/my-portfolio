@@ -72,6 +72,17 @@ function Projects() {
     },
     {
       id: 7,
+      title: "Veylora Fine Dining",
+      category: "react",
+      tech: ["React", "Tailwind CSS", "Responsive Design"],
+      description: "A modern, elegant, and fully responsive web application for a luxury fine dining restaurant featuring a bento grid, interactive menu, and reservation system.",
+      image: "🍷",
+      isImage: false,
+      liveLink: "https://veylora-the-fine-dining.vercel.app/",
+      githubLink: "https://github.com/Mahak-012/Veylora-the-fine-dining",
+    },
+    {
+      id: 8,
       title: "To Do App (Mobile)",
       category: "react",
       tech: ["React Native", "Expo", "AsyncStorage"],

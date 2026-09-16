@@ -1,47 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 function Skills() {
-  const [counters, setCounters] = useState({
-    html: 0,
-    css: 0,
-    js: 0,
-    react: 0,
-    tailwind: 0,
-    bootstrap: 0,
-    seo: 0,
-    figma: 0,
-  });
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCounters({
-        html: 95,
-        css: 90,
-        js: 88,
-        react: 85,
-        tailwind: 92,
-        bootstrap: 85,
-        seo: 82,
-        figma: 78,
-      });
-    }, 200);
-    return () => clearTimeout(timer);
-  }, []);
-
   const frontendSkills = [
-    { name: "HTML5 / Semantic Markup", level: counters.html, icon: "🌐", color: "#e34f26" },
-    { name: "CSS3 / Modern Architecture", level: counters.css, icon: "🎨", color: "#264de4" },
-    { name: "JavaScript (ES6+ / DOM)", level: counters.js, icon: "⚡", color: "#f7df1e" },
-    { name: "React.js Ecosystem", level: counters.react, icon: "⚛️", color: "#61dafb" },
-    { name: "Tailwind CSS / PostCSS", level: counters.tailwind, icon: "💨", color: "#38bdf8" },
-    { name: "Bootstrap 5 / UI Frameworks", level: counters.bootstrap, icon: "📦", color: "#7952b3" },
+    { name: "HTML5 / Semantic Markup", level: "Advanced", icon: "🌐", color: "#e34f26", width: "95%" },
+    { name: "CSS3 / Modern Architecture", level: "Advanced", icon: "🎨", color: "#264de4", width: "90%" },
+    { name: "JavaScript (ES6+ / DOM)", level: "Advanced", icon: "⚡", color: "#f7df1e", width: "88%" },
+    { name: "React.js Ecosystem", level: "Expert", icon: "⚛️", color: "#61dafb", width: "85%" },
+    { name: "Tailwind CSS / PostCSS", level: "Advanced", icon: "💨", color: "#38bdf8", width: "92%" },
+    { name: "Bootstrap 5 / UI Frameworks", level: "Advanced", icon: "📦", color: "#7952b3", width: "85%" },
   ];
 
   const otherSkills = [
-    { name: "SEO & Web Performance", level: counters.seo, icon: "🔍", color: "#10b981" },
-    { name: "Figma UI/UX & Prototyping", level: counters.figma, icon: "🎯", color: "#a259ff" },
-    { name: "Responsive Mobile-First Design", level: 90, icon: "📱", color: "#34d399" },
-    { name: "Git, GitHub & Version Control", level: 85, icon: "🐙", color: "#f05032" },
+    { name: "SEO & Web Performance", level: "Advanced", icon: "🔍", color: "#10b981", width: "82%" },
+    { name: "Figma UI/UX & Prototyping", level: "Intermediate", icon: "🎯", color: "#a259ff", width: "78%" },
+    { name: "Responsive Mobile-First Design", level: "Expert", icon: "📱", color: "#34d399", width: "90%" },
+    { name: "Git, GitHub & Version Control", level: "Advanced", icon: "🐙", color: "#f05032", width: "85%" },
   ];
 
   const skillTags = [
@@ -135,19 +108,16 @@ function Skills() {
                         {skill.name}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-emerald-400 text-sm font-bold font-mono">
-                        {skill.level}%
-                      </span>
+                    <div>
                       <span
-                        className="text-[9px] uppercase tracking-widest font-black px-2 py-0.5 rounded-md border shadow-sm"
+                        className="text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-md border shadow-sm"
                         style={{ 
                           background: `${skill.color}15`, 
                           borderColor: `${skill.color}40`, 
                           color: skill.color 
                         }}
                       >
-                        {skill.level >= 85 ? "Expert" : "Advanced"}
+                        {skill.level}
                       </span>
                     </div>
                   </div>
@@ -155,7 +125,7 @@ function Skills() {
                     <div
                       className="h-full rounded-full transition-all duration-1200 ease-out glow-progress-bar"
                       style={{
-                        width: `${skill.level}%`,
+                        width: skill.width,
                         background: `linear-gradient(90deg, ${skill.color}, #10b981)`,
                         "--bar-color": `${skill.color}70`
                       }}
@@ -188,19 +158,16 @@ function Skills() {
                         {skill.name}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-emerald-400 text-sm font-bold font-mono">
-                        {skill.level}%
-                      </span>
+                    <div>
                       <span
-                        className="text-[9px] uppercase tracking-widest font-black px-2 py-0.5 rounded-md border shadow-sm"
+                        className="text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-md border shadow-sm"
                         style={{ 
                           background: `${skill.color}15`, 
                           borderColor: `${skill.color}40`, 
                           color: skill.color 
                         }}
                       >
-                        {skill.level >= 85 ? "Expert" : "Advanced"}
+                        {skill.level}
                       </span>
                     </div>
                   </div>
@@ -208,7 +175,7 @@ function Skills() {
                     <div
                       className="h-full rounded-full transition-all duration-1200 ease-out glow-progress-bar"
                       style={{
-                        width: `${skill.level}%`,
+                        width: skill.width,
                         background: `linear-gradient(90deg, ${skill.color}, #34d399)`,
                         "--bar-color": `${skill.color}70`
                       }}
@@ -223,7 +190,7 @@ function Skills() {
         {/* TECH CLOUD COMPONENT */}
         <div className="mt-12 cyber-skill-card rounded-3xl p-6 sm:p-10 text-center">
           <p className="text-zinc-400 text-xs sm:text-sm font-light tracking-wide mb-6">
-            📦 <span className="text-emerald-400 font-medium font-semibold">Production Tech Ecosystem</span> — Fully integrated and actively deployed
+            📦 <span className="text-emerald-400 font-medium">Production Tech Ecosystem</span> — Fully integrated and actively deployed
           </p>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {skillTags.map((tech) => (
